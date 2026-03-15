@@ -1,0 +1,340 @@
+
+.contact-main {
+  padding: 120px 0 0px;
+  position: relative;
+  overflow: hidden;
+  background: transparent; /* let .contact-page show the pattern */
+}
+.contact-main-title {
+  text-align: center;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  color :white;
+  font-size: clamp(3rem, 6vw, 6rem);
+  line-height: 1.02;
+  font-weight: 700;
+}
+
+.contact-main-title::after {
+  content: "";
+  display: flex;
+  max-width: 200px;
+  margin: 10px auto 0;
+  height: 4px;
+  background: var(--secondary-color);
+}
+
+
+.contact-hero {
+  background-repeat: repeat;
+  background-size: 900px;
+  padding: 50px 0 0px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.contact-hero-inner {
+  width: min(1100px, calc(100% - 2rem));
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.contact-hero-title {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  line-height: 1.02;
+  font-weight: 700;
+}
+
+.contact-hero-rule {
+  margin: 18px auto 0;
+  width: min(920px, calc(100% - 2rem));
+  height: 4px;
+  background: rgba(255, 255, 255, 0.55);
+  position: relative;
+}
+
+.contact-hero-rule::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 160px;
+  height: 4px;
+  background: var(--secondary-color);
+}
+
+.contact-hero-subtitle {
+  margin: 22px 0 0;
+  color: #fff;
+  font-size: 3rem;
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+.contact-hero-lede {
+  margin: 10px 0 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.contact-collage {
+  margin: 22px auto 0;
+  position: relative;
+  width: min(1240px, 100%);
+  height: 500px;
+}
+
+.contact-photo {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 10px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.28);
+}
+
+.contact-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.contact-photo--left {
+  left: 18px;
+  width: 360px;
+  height: 360px;
+  transform: translateY(-45%) rotate(-10deg);
+  z-index: 1;
+}
+
+.contact-photo--center {
+  left: 50%;
+  width: 433px;
+  height: 423px;
+  transform: translate(-50%, -50%) rotate(0deg);
+  z-index: 3;
+}
+
+.contact-photo--right {
+  right: 18px;
+  width: 360px;
+  height: 360px;
+  transform: translateY(-45%) rotate(10deg);
+  z-index: 2;
+}
+
+.contact-collage-nav {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.contact-collage-btn {
+  width: 70px;
+  height: 70px;
+  border-radius: 999px;
+  border: none;
+  background: transparent;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.contact-collage-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  filter: brightness(0) invert(1);
+}
+
+@media (max-width: 640px) {
+  .contact-hero {
+    padding: 20px 0 26px;
+  }
+  .contact-hero-lede {
+    font-size: 0.8rem;
+  }
+
+  .contact-hero-inner {
+    width: calc(100% - 1.25rem);
+  }
+
+  .contact-hero-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .contact-collage {
+    height: 240px;
+  }
+
+  .contact-photo--left,
+  .contact-photo--right {
+    width: 210px;
+    height: 140px;
+  }
+
+  .contact-photo--center {
+    width: 180px;
+    height: 160px;
+  }
+}
+
+@media (max-width: 420px) {
+  .contact-collage {
+    height: 270px;
+  }
+
+  .contact-photo--left {
+    left: 6px;
+  }
+
+  .contact-photo--right {
+    right: 6px;
+  }
+}
+
+/* Responsive-only overrides (keep desktop styles unchanged) */
+@media (max-width: 1200px) {
+  .contact-collage {
+    height: 440px;
+  }
+
+  .contact-photo--left,
+  .contact-photo--right {
+    width: 320px;
+    height: 320px;
+  }
+
+  .contact-photo--center {
+    width: 400px;
+    height: 390px;
+  }
+}
+
+@media (max-width: 980px) {
+  .contact-main {
+    padding: 110px 0 0;
+  }
+
+  .contact-hero-subtitle {
+    font-size: 2.2rem;
+  }
+
+  .contact-collage {
+    height: 380px;
+  }
+
+  .contact-photo--left,
+  .contact-photo--right {
+    width: 280px;
+    height: 280px;
+  }
+
+  .contact-photo--center {
+    width: 340px;
+    height: 330px;
+  }
+
+  .contact-collage-btn {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-hero-subtitle {
+    font-size: 1.7rem;
+  }
+
+  .contact-collage {
+    height: 320px;
+  }
+
+  .contact-photo--left,
+  .contact-photo--right {
+    width: 240px;
+    height: 220px;
+  }
+
+  .contact-photo--center {
+    width: 250px;
+    height: 260px;
+  }
+
+  .contact-collage-btn {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* Ensure mobile sizing wins (placed last to override the 768px rules above) */
+@media (max-width: 640px) {
+  .contact-collage {
+    height: 260px;
+  }
+
+  .contact-photo--left,
+  .contact-photo--right {
+    width: 170px;
+    height: 160px;
+    transform: translateY(-50%) rotate(-10deg);
+  }
+
+  .contact-photo--right {
+    transform: translateY(-50%) rotate(10deg);
+  }
+
+  .contact-photo--center {
+    width: 220px;
+    height: 210px;
+  }
+
+  .contact-collage-btn {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+@media (max-width: 420px) {
+  .contact-collage {
+    height: 240px;
+  }
+
+  .contact-photo--left,
+  .contact-photo--right {
+    width: 150px;
+    height: 145px;
+  }
+
+  .contact-photo--center {
+    width: 200px;
+    height: 190px;
+  }
+}
+
+@media (max-width: 360px) {
+  .contact-photo--left,
+  .contact-photo--right {
+    width: 140px;
+    height: 135px;
+  }
+
+  .contact-photo--center {
+    width: 190px;
+    height: 180px;
+  }
+}

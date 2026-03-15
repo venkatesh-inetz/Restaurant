@@ -1,0 +1,370 @@
+.site-footer {
+  background: #fff;
+  padding: 30px;
+}
+
+.site-footer-panel {
+  position: relative;
+  border-radius: 16px;
+  background-color: var(--primary-color);
+  background-image:
+    url("../../assets/images/signaturememories_bg.png");
+  background-repeat: no-repeat;
+  background-size:cover;
+
+  color: #fff;
+  overflow: hidden;
+  padding: 44px 46px 26px;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.18);
+}
+
+
+
+
+.site-footer-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.35fr 0.7fr 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: start;
+  margin-top: 30px;
+}
+
+.footer-lower {
+  position: relative;
+  z-index: 1;
+  margin-top: 70px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.footer-brand{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.footer-brand-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-mark {
+  width: 50px;
+  height: 50px;
+  border-radius: 999px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.65);
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.1);
+
+}
+
+.footer-brand-name {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.footer-tagline {
+
+  font-size: 1.05rem;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.footer-subtitle {
+  font-size: 1.05rem;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.footer-subscribe {
+  width: min(470px, 100%);
+  height: 52px;
+  display: flex;
+  align-items: stretch;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.footer-subscribe input {
+  flex: 1 1 auto;
+  border: 0;
+  outline: none;
+  background: transparent;
+  padding: 0 18px;
+  color: #fff;
+  font-size: 1.05rem;
+}
+
+.footer-subscribe input::placeholder {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.footer-subscribe button {
+  width: 64px;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.footer-col-title {
+  margin: 6px 0 16px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+}
+
+.footer-links nav {
+  display: grid;
+  gap: 14px;
+}
+
+.footer-links a {
+  color: #fff;
+  font-size: 1.05rem;
+}
+
+
+
+.footer-info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 14px;
+}
+
+.footer-info-list li {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 12px;
+  align-items: center;
+}
+
+.footer-info-list a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-info-list a:hover {
+  text-decoration: underline;
+}
+
+.footer-ico {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  display: grid;
+  place-items: center;
+}
+
+.footer-ico--solid {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.footer-map-btn {
+  margin-top: 18px;
+  height: 54px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 35px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-map-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.footer-map-ico {
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+}
+
+.footer-hours-row {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 12px;
+  align-items: start;
+  margin-top: 10px;
+}
+
+.footer-hours-row p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.05rem;
+  line-height: 1.45;
+}
+
+.footer-social {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 16px;
+}
+
+.footer-social-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  background: #fff;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.25);
+  transition: transform 140ms ease;
+}
+
+.footer-social-img {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+  display: block;
+  /* Tint PNGs toward the brand primary red. */
+  filter: brightness(0) saturate(100%) invert(16%) sepia(82%) saturate(5050%)
+    hue-rotate(348deg) brightness(88%) contrast(110%);
+}
+
+.footer-social-btn:hover {
+  transform: translateY(-1px);
+}
+
+.footer-bottom {
+  position: relative;
+  z-index: 1;
+  margin-top: 0;
+  padding-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 30px;
+  color: rgba(255, 255, 255, 0.95);
+  text-align: right;
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 28px;
+}
+
+.footer-bottom a {
+  color: rgba(255, 255, 255, 0.95);
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+.footer-copy {
+  margin: 0;
+}
+
+@media (max-width: 1120px) {
+  .site-footer-panel {
+    padding: 40px 26px 22px;
+  }
+
+  .site-footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 34px;
+  }
+
+  .footer-col-title {
+    margin-top: 0;
+  }
+
+  .footer-lower {
+    margin-top: 46px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-bottom {
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+}
+
+@media (max-width: 860px) {
+  .site-footer {
+    padding: 22px;
+  }
+
+  .site-footer-panel {
+    padding: 34px 22px 20px;
+  }
+
+  .site-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .footer-col-title {
+    font-size: 1.55rem;
+  }
+
+  .footer-links nav {
+    gap: 12px;
+  }
+
+  .footer-subscribe {
+    height: 48px;
+  }
+
+  .footer-subscribe input {
+    font-size: 0.98rem;
+  }
+
+  .footer-lower {
+    margin-top: 34px;
+    align-items: flex-start;
+  }
+
+  .footer-bottom {
+    justify-content: flex-start;
+    text-align: left;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-footer-panel {
+    padding: 34px 18px 18px;
+  }
+
+  .site-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .footer-subscribe button {
+    width: 54px;
+  }
+
+  .footer-bottom {
+    gap: 16px;
+  }
+
+  .footer-lower {
+    margin-top: 34px;
+  }
+}

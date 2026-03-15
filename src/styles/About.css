@@ -1,0 +1,33 @@
+.about-page {
+  background: #fff;
+}
+.about-hero {
+  background-repeat: repeat;
+  padding: 120px 0 0px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  
+}
+.about-hero-title {
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  color:var(--primary-color);
+  font-size: clamp(3rem, 6vw, 6rem);
+  line-height: 1.02;
+  font-weight: 700;
+}
+.about-hero-title span {
+  color: black;
+}
+.about-hero-title::after {
+  content: "";
+  display: flex;
+  max-width: 200px;
+  margin: 10px auto 0;
+  height: 4px;
+  background: var(--secondary-color);
+}
+
+

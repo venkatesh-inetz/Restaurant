@@ -1,0 +1,658 @@
+.signature-memories {
+  background-color: #c4192d;
+  background-repeat: repeat;
+  color: #fff;
+  z-index: 1;
+  position: relative;
+}
+
+.signature-inner,
+.memories-inner {
+  /* width: min(1460px, calc(100% - 2.2rem)); */
+  margin: 0 auto;
+}
+
+.signature-inner {
+  padding: 50px 0px;
+}
+
+.signature-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.25rem;
+  margin:0 4vw 1.2rem;
+ 
+}
+.signature-head span {
+  font-size: clamp(1.95rem, 3.5vw, 3rem);
+  line-height: 1.02;
+  font-weight: 700;
+  color: var(--secondary-color);
+}
+
+.signature-head h2 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(1.95rem, 3.5vw, 3rem);
+  line-height: 1.02;
+  font-weight: 700;
+}
+
+.signature-head p {
+  margin: 1rem 0 0;
+  max-width: 460px;
+  font-size: 1rem;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.signature-arrows {
+  display: inline-flex;
+  gap: 0.45rem;
+}
+
+.sig-arrow-btn {
+  width: 50px;
+  height: 50px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.sig-arrow-btn:disabled,
+.memory-arrow:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+.sig-arrow-btn img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.signature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin:8vw 4vw 5vw;
+}
+
+.signature-card {
+  display: block;
+  background: transparent;
+  transition: transform 0.25s ease;
+}
+.signature-card:hover .signature-card-footer {
+  opacity: 1;
+  visibility: visible;
+  color: #fff;
+}
+.signature-card:hover{
+  transform: translateY(-5vw);
+}
+.signature-card:hover .signature-card-body{
+  background-color: var(--secondary-color);
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+}
+.signature-card:hover .signature-card-body h3,
+.signature-card:hover .signature-card-body p {
+  color: black;
+}
+
+.signature-card-image {
+  width: 100%;
+  max-height: 430px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.signature-card-body {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 10px;
+  min-height: 100px;
+}
+
+.signature-card h3 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.1;
+  font-weight: 500;
+  color: #fff;
+}
+
+.signature-card p {
+  margin: 0.35rem 0 0;
+  font-size: 12px;
+  line-height: 1.4;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.signature-card-footer {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.65rem;
+  min-height: 34px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease;
+}
+
+.signature-stars {
+  color: white;
+  font-size: 1.5rem;
+  letter-spacing: 0.3em;
+}
+
+.signature-price {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.memories-wrap {
+  border-top: 1px solid black;
+  padding: 30px 0 42px;
+}
+
+.memories-inner h2 {
+  margin: 0;
+  color: #fff;
+  text-align: center;
+  font-size: clamp(1.8rem, 3.6vw, 3rem);
+  line-height: 1.04;
+  max-width: 940px;
+  margin-inline: auto;
+  font-weight: 700;
+}
+
+.memories-carousel {
+  margin-top: 4rem;
+  position: relative;
+  height: 35vw;
+  overflow: hidden;
+}
+
+.memories-track {
+  position: relative;
+  width: 100%;
+  
+}
+
+.memory-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition: transform 0.25s ease;
+  transform-origin: center;
+  
+  overflow: hidden;
+}
+
+.memory-card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.memory-card--slot-1 {
+  width: 380px;
+  height: 360px;
+  transform: translate(-205%, 25%) rotate(-5deg);
+  z-index: 1;
+}
+
+.memory-card--slot-2 {
+  width: 450px;
+  height: 400px;
+  transform: translate(-132%, 10%) rotate(-5deg);
+  z-index: 2;
+}
+
+.memory-card--slot-3 {
+  width: 470px;
+  height: 475px;
+  transform: translate(-50%, 0%);
+  z-index: 4;
+}
+
+.memory-card--slot-4 {
+  width: 450px;
+  height: 400px;
+  transform: translate(15%, 10%) rotate(5deg);
+  z-index: 2;
+}
+
+.memory-card--slot-5 {
+ width: 380px;
+  height: 360px;
+  transform: translate(110%, 25%) rotate(5deg);
+  z-index: 1;
+}
+
+  
+
+.memory-arrow {
+  position: absolute;
+  top: 54%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border: 0;
+  border-radius: 50%;
+  padding: 0;
+  line-height: 0;
+  /* background: #fff; */
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  z-index: 2;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+}
+
+.memory-arrow--left {
+  left: 60px;
+}
+
+.memory-arrow--right {
+  right: 60px;
+}
+
+.memory-arrow img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.memories-description h3 {
+  margin: 0;
+  color: #fff;
+  text-align: center;
+  font-size: clamp(1.4rem, 3vw, 1.3rem);
+  line-height: 1.04;
+  max-width: 940px;
+  margin-inline: auto;
+  font-weight: 700;
+}
+
+.memories-description p {
+  max-width: 400px;
+  margin: 1.3rem auto 0;
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.86);
+  font-weight: 400;
+}
+
+.memories-btn {
+  margin: 0.9rem auto 0;
+  display: block;
+  border: 0;
+  border-radius: 10px;
+  background: #fff;
+  color: var(--primary-color);
+  padding: 0.7rem 2rem;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+  .signature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.1rem 0.9rem;
+  }
+
+  .signature-card-image {
+    height: 260px;
+  }
+
+  .memories-carousel {
+    height: 300px;
+  }
+
+  .memory-card--slot-1 {
+    width: 170px;
+    height: 230px;
+    transform: translate(-252%, 20%);
+  }
+
+  .memory-card--slot-2 {
+    width: 190px;
+    height: 285px;
+    transform: translate(-150%, 6%);
+  }
+
+  .memory-card--slot-3 {
+    width: 300px;
+    height: 330px;
+  }
+
+  .memory-card--slot-4 {
+    width: 190px;
+    height: 285px;
+    transform: translate(50%, 6%);
+  }
+
+  .memory-card--slot-5 {
+    width: 170px;
+    height: 230px;
+    transform: translate(135%, 20%);
+  }
+
+  .memory-arrow {
+    width: 50px;
+    height: 50px;
+  }
+
+  .memory-arrow--left {
+    left: 12px;
+  }
+
+  .memory-arrow--right {
+    right: 12px;
+  }
+  .memories-description h3 {
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 760px) {
+  .signature-inner {
+    padding: 42px 0 34px;
+  }
+
+  .signature-head {
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+
+  .signature-head p {
+    max-width: none;
+    font-size: 0.84rem;
+  }
+
+  .signature-arrows {
+    align-self: flex-end;
+    margin-top: 0;
+  }
+
+  .signature-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .signature-card-image {
+    height: 240px;
+  }
+
+  .memories-wrap {
+    padding: 32px 0 36px;
+  }
+
+  .memories-carousel {
+    margin-top: 1rem;
+    height: 240px;
+  }
+
+  .memory-card--slot-1,
+  .memory-card--slot-5 {
+    display: none;
+  }
+
+  .memory-card--slot-2 {
+    width: 180px;
+    height: 180px;
+    transform: translate(-108%, -50%);
+  }
+
+  .memory-card--slot-3 {
+    width: 220px;
+    height: 230px;
+  }
+
+  .memory-card--slot-4 {
+    width: 180px;
+    height: 180px;
+    transform: translate(8%, -50%);
+  }
+
+  .memory-arrow {
+    top: 56%;
+    width: 36px;
+    height: 36px;
+  }
+
+  .memory-arrow--left {
+    left: 4px;
+  }
+
+  .memory-arrow--right {
+    right: 4px;
+  }
+
+  .memory-arrow img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 520px) {
+  .signature-memories {
+    background-size: 380px;
+  }
+
+  .signature-inner,
+  .memories-inner {
+    width: calc(100% - 1rem);
+  }
+
+  .signature-card-image {
+    height: 210px;
+  }
+
+  .memory-arrow {
+    width: 24px;
+    height: 24px;
+    top: 54%;
+  }
+
+  .memory-arrow--left {
+    left: 4px;
+  }
+
+  .memory-arrow--right {
+    right: 4px;
+  }
+
+  .memories-carousel {
+    height: 196px;
+  }
+
+  .memory-card--slot-2 {
+    width: 128px;
+    height: 132px;
+    transform: translate(-105%, 10%);
+  }
+
+  .memory-card--slot-3 {
+    width: 160px;
+    height: 170px;
+  }
+
+  .memory-card--slot-4 {
+    width: 128px;
+    height: 132px;
+    transform: translate(6%, 10%);
+  }
+}
+
+/* Menu page variant: reuses the component but matches the "Menu List" layout */
+.signature-memories--menu .signature-inner {
+  padding-top: 40px;
+  display: flow-root;
+}
+
+.signature-memories--menu .signature-head {
+  align-items: flex-start;
+  position: relative;
+}
+
+.signature-memories--menu .signature-head > div:first-child {
+  padding-right: 120px;
+}
+
+.signature-memories--menu .signature-arrows {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.signature-memories--menu .sig-arrow-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  background: transparent;
+  box-shadow: none;
+}
+
+.signature-memories--menu .sig-arrow-btn img {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) invert(1);
+}
+
+.signature-memories--menu .signature-grid {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 26px;
+  margin: 36px 4vw 0;
+}
+
+.signature-memories--menu .signature-card {
+  width: 260px;
+  flex: 0 0 260px;
+}
+
+.signature-memories--menu .signature-card-image {
+  height: 300px;
+  max-height: none;
+}
+
+.signature-memories--menu .signature-card-body {
+  margin-top: 12px;
+  padding: 0;
+  border: 0;
+  min-height: 0;
+}
+
+.signature-memories--menu .signature-card-footer {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.signature-memories--menu .signature-card:hover {
+  transform: none;
+}
+
+.signature-memories--menu .signature-card:hover .signature-card-body {
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+}
+
+.signature-memories--menu .signature-card:hover .signature-card-footer {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.signature-memories--menu .signature-card--active {
+  transform: translateY(-26px);
+}
+
+.signature-memories--menu .signature-card--active .signature-card-image {
+  height: 360px;
+}
+
+.signature-memories--menu .signature-card--active .signature-card-body {
+  background: var(--secondary-color);
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 12px 12px 10px;
+}
+
+.signature-memories--menu .signature-card--active .signature-card-body h3,
+.signature-memories--menu .signature-card--active .signature-card-body p {
+  color: #000;
+}
+
+.signature-memories--menu .signature-card--active .signature-card-footer {
+  opacity: 1;
+  visibility: visible;
+}
+
+.signature-memories--menu .signature-card--active .signature-stars {
+  color: #fff;
+}
+
+.signature-memories--menu .signature-card--active .signature-price {
+  color: var(--primary-color);
+}
+
+@media (max-width: 1100px) {
+  .signature-memories--menu .signature-grid {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 28px 4vw 44px;
+  }
+
+  .signature-memories--menu .signature-card--active {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .signature-memories--menu .signature-inner {
+    padding-top: 22px;
+  }
+
+  .signature-memories--menu .signature-grid {
+    gap: 18px;
+    margin: 22px auto 40px;
+    width: calc(100% - 1.25rem);
+  }
+
+  .signature-memories--menu .signature-card {
+    width: 100%;
+    flex-basis: auto;
+  }
+
+  .signature-memories--menu .signature-card-image,
+  .signature-memories--menu .signature-card--active .signature-card-image {
+    height: 240px;
+  }
+
+  .signature-memories--menu .signature-card-footer {
+    opacity: 1;
+    visibility: visible;
+  }
+}

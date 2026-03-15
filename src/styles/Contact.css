@@ -1,0 +1,22 @@
+/* Contact page wrapper background (pattern) */
+.contact-page {
+  min-height: 100vh;
+  background-color: var(--primary-color);
+  background-image: url("../assets/images/signaturememories_bg.png");
+  background-repeat: repeat;
+  background-size: 900px;
+  overflow-x: hidden;
+}
+
+/* Responsive-only overrides (keep desktop styles unchanged) */
+@media (max-width: 640px) {
+  .contact-page {
+    background-size: 760px;
+  }
+}
+
+@media (max-width: 420px) {
+  .contact-page {
+    background-size: 680px;
+  }
+}

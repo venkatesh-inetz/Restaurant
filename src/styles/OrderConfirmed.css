@@ -1,0 +1,201 @@
+﻿.order-page {
+  min-height: 100vh;
+  padding-top: 120px;
+  background-color: var(--primary-color);
+  background-image: url("../assets/images/signaturememories_bg.png");
+  background-repeat: repeat;
+  background-size: 900px;
+}
+
+.order-hero-inner {
+  width: min(900px, calc(100% - 2rem));
+  margin: 0 auto;
+  text-align: center;
+  padding: 26px 0 70px;
+}
+
+.order-check {
+  width: 52px;
+  height: 52px;
+  border-radius: 999px;
+  background: var(--secondary-color);
+  display: grid;
+  place-items: center;
+  margin: 0 auto 12px;
+  color: var(--primary-color);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.25);
+}
+
+.order-hero-inner h1 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(3rem, 6vw, 4.2rem);
+  font-weight: 900;
+}
+
+.order-sub {
+  margin: 8px 0 18px;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 1.05rem;
+}
+
+.order-card {
+  background: #fff;
+  border-radius: 16px;
+  border: 2px solid rgba(0, 0, 0, 0.55);
+  padding: 18px 18px 16px;
+  text-align: left;
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.22);
+}
+
+.order-card-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.order-card-top .right {
+  text-align: right;
+}
+
+.k {
+  color: var(--primary-color);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.v {
+  font-weight: 900;
+  color: #111;
+  margin-top: 2px;
+}
+
+.divider {
+  height: 1px;
+  background: rgba(0, 0, 0, 0.18);
+  margin: 14px 0;
+}
+
+.section .title {
+  font-weight: 900;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.kv {
+  color: rgba(0, 0, 0, 0.78);
+  font-size: 0.95rem;
+  padding: 4px 0;
+}
+
+.kv span {
+  color: var(--primary-color);
+  font-weight: 900;
+  margin-right: 6px;
+}
+
+.items {
+  display: grid;
+  gap: 10px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.name {
+  color: var(--primary-color);
+  font-weight: 800;
+}
+
+.amt {
+  color: #111;
+  font-weight: 800;
+}
+
+.totals {
+  margin-top: 14px;
+  display: grid;
+  gap: 8px;
+  color: rgba(0, 0, 0, 0.78);
+}
+
+.trow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.paid {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 14px;
+}
+
+.paid-title {
+  font-weight: 900;
+  color: #111;
+}
+
+.receipt {
+  font-size: 0.75rem;
+  color: rgba(0, 0, 0, 0.55);
+  margin-top: 4px;
+}
+
+.paid-amt {
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+.actions {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.btn {
+  min-width: 160px;
+  height: 44px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+}
+
+.btn-grad {
+  background: linear-gradient(90deg, #ffbe3c 0%, #f09d1f 40%, #c61d2b 100%);
+  color: #fff;
+}
+
+.btn-outline {
+  border: 1px solid rgba(198, 29, 43, 0.55);
+  color: var(--primary-color);
+  background: #fff;
+}
+
+/* Responsive-only overrides */
+@media (max-width: 520px) {
+  .order-page {
+    padding-top: 96px;
+  }
+
+  .order-card-top {
+    flex-direction: column;
+  }
+
+  .order-card-top .right {
+    text-align: left;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

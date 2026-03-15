@@ -1,0 +1,53 @@
+.menu-page {
+  background: #fff;
+}
+
+.menu-hero {
+  background-color: var(--primary-color);
+  background-repeat: repeat;
+  padding: 120px 0 34px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.menu-hero-title {
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-size: clamp(3rem, 6vw, 6rem);
+  line-height: 1.02;
+  font-weight: 700;
+}
+.menu-hero-title::after {
+  content: "";
+  display: flex;
+  max-width: 200px;
+  margin: 10px auto 0;
+  height: 4px;
+  background: var(--secondary-color);
+}
+
+
+@media (max-width: 980px) {
+  .menu-hero {
+    padding: 140px 0 28px;
+  }
+}
+
+@media (max-width: 640px) {
+  .menu-hero {
+    padding: 118px 0 24px;
+  }
+
+  .menu-hero-rule {
+    width: calc(100% - 1.25rem);
+  }
+
+  .menu-hero-rule::after {
+    width: 120px;
+  }
+}
+

@@ -1,0 +1,295 @@
+/* Full-screen booking modal page (route-based) */
+.booking-page {
+  min-height: 100vh;
+  background: #2a0a0f;
+  position: relative;
+  padding: 80px 20px;
+}
+
+.booking-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 40;
+}
+
+.booking-modal {
+  position: relative;
+  z-index: 41;
+  width: min(1240px, calc(100% - 2rem));
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 14px;
+  padding: 48px 54px 40px;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.55);
+}
+
+.booking-close {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  width: 34px;
+  height: 34px;
+  border: 0;
+  background: transparent;
+  color: var(--primary-color);
+  font-size: 1.7rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.booking-head {
+  text-align: center;
+}
+
+.booking-head h1 {
+  margin: 0;
+  color: var(--primary-color);
+  font-size: clamp(2.1rem, 3.6vw, 3.3rem);
+  font-weight: 900;
+  line-height: 1.08;
+}
+
+.booking-head p {
+  margin: 12px auto 0;
+  max-width: 680px;
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.booking-grid {
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px 34px;
+  align-items: start;
+}
+
+.booking-col {
+  display: grid;
+  gap: 18px;
+}
+
+.f {
+  display: grid;
+  gap: 10px;
+}
+
+.f span {
+  color: var(--primary-color);
+  font-weight: 900;
+  font-size: 1.05rem;
+}
+
+.f input,
+.f select,
+.f textarea {
+  width: 100%;
+  border: 0;
+  outline: none;
+  border-radius: 10px;
+  background: #f3e0e1;
+  padding: 18px 18px;
+  font-size: 0.95rem;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.f select {
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, rgba(0, 0, 0, 0.6) 50%),
+    linear-gradient(135deg, rgba(0, 0, 0, 0.6) 50%, transparent 50%);
+  background-position: calc(100% - 18px) 50%, calc(100% - 12px) 50%;
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+  padding-right: 42px;
+}
+
+.f textarea {
+  resize: none;
+  min-height: 210px;
+}
+
+.f--date {
+  position: relative;
+}
+
+.date-wrap {
+  position: relative;
+}
+
+.date-input {
+  padding-right: 46px !important;
+  cursor: pointer;
+}
+
+.date-icon {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  border: 0;
+  background: transparent;
+  color: var(--primary-color);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.calendar {
+  margin-top: 16px;
+}
+
+.calendar {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.22);
+}
+
+.cal-head {
+  background: var(--primary-color);
+  color: #fff;
+  height: 52px;
+  display: grid;
+  grid-template-columns: 60px 1fr 60px;
+  align-items: center;
+}
+
+.cal-month {
+  text-align: center;
+  font-weight: 900;
+  letter-spacing: 0.01em;
+}
+
+.cal-nav {
+  height: 52px;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.cal-grid {
+  background: #1c1c1c;
+  color: rgba(255, 255, 255, 0.86);
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0;
+  padding: 14px 14px 16px;
+}
+
+.cal-dow {
+  font-size: 0.78rem;
+  opacity: 0.9;
+  padding: 8px 0;
+  text-align: center;
+}
+
+.cal-cell-btn {
+  height: 44px;
+  display: grid;
+  place-items: center;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.75);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.cal-cell-btn.is-dim {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.cal-cell-btn:disabled {
+  cursor: default;
+}
+
+.cal-cell-btn.is-active {
+  color: #111;
+  background: var(--secondary-color);
+  border-radius: 999px;
+  width: 44px;
+  justify-self: center;
+}
+
+.agree {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 0.85rem;
+  margin-top: -4px;
+}
+
+.agree input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--primary-color);
+}
+
+.booking-actions {
+  margin-top: 28px;
+  display: flex;
+  justify-content: center;
+}
+
+.reserve {
+  width: 180px;
+  height: 44px;
+  border-radius: 8px;
+  border: 0;
+  background: var(--primary-color);
+  color: #fff;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.reserve:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* Responsive-only overrides */
+@media (max-width: 980px) {
+  .booking-modal {
+    padding: 34px 26px 26px;
+  }
+
+  .booking-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .booking-page {
+    padding: 72px 12px;
+  }
+
+  .booking-modal {
+    width: calc(100% - 1.25rem);
+    padding: 28px 16px 20px;
+  }
+
+  .f span {
+    font-size: 0.95rem;
+  }
+
+  .f input,
+  .f select,
+  .f textarea {
+    padding: 14px 14px;
+  }
+
+  .cal-grid {
+    padding: 12px;
+  }
+
+  .cal-cell-btn {
+    height: 38px;
+  }
+}
