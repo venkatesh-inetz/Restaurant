@@ -47,7 +47,7 @@ import item9 from "./images/item9.png";
 import item10 from "./images/item10.png";
 import item11 from "./images/item11.png";
 import item12 from "./images/item12.png";
-import ingredients from "./images/sourced_ingredients.jpg";
+import ingredients from "./images/sourced_Ingredients.jpg";
 import seafood from "./images/sea-food.png";
 import ecofriendly from "./images/eco-friendly.jpg";
 import foodwaste from "./images/food-waste.jpg";
