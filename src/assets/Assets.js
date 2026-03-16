@@ -1,6 +1,6 @@
 import logo from "./images/logo.png";
 import ballon from "./images/ballon.png";
-import ellipse from "./images/ellipse.png";
+import ellipse from "./images/Ellipse.png";
 import heroleft from "./images/hero_left.png";
 import herodish1 from "./images/hero_dish1.png";
 import herodish2 from "./images/hero_dish2.png";
